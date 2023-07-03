@@ -78,3 +78,10 @@ const bowser = new NamedPerson(
   'Hell Road 5',
   'bowser@gmail.com'
 )
+
+// questo è il concetto fondamentale :)
+// poi, nel corso delle evoluzioni di JS, sempre al fine di attrarre nuovi sviluppatori che magari
+// erano abituati ad altri linguaggi più strettamente orientati agli oggetti, è stata anche in JS
+// introdotta una nuova keywork: "class"
+// "class" genera una funzione costruttore
+// andiamo su class.js
