@@ -34,12 +34,32 @@ class ComputerWithModel extends Computer {
     // super.constructor(_brand)
     super(_brand) // ho invocato il costruttore della classe da cui sto estendendo!
     // così genero tutte le proprietà/metodi di Computer (ne ho solo una, brand)
+    // l'invocazione di super, se estendete da un'altra classe, dev'essere la PRIMA RIGA dentro il vostro constructor
     // ora semplicemente aggiungo le proprietà UNICHE di ComputerWithModel
     this.model = _model
   }
 
-  numberOfPeripherals = 5
+  showModel() {
+    return super.showBrand() + ', il modello è ' + this.model
+  }
+
+  //   numberOfPeripherals = 5 <-- è anche possibile sovrascrivere proprietà esistenti in Computer
 }
 
 const macbookPro2015 = new ComputerWithModel('Apple', 'Macbook 2015')
-macbookPro2015.numberOfPeripherals // 5
+// l'inizializzazione di un nuovo ComputerWithModel, estendendo da Computer, richiede anche tutti i parametri
+// richiesti dal constructor di Computer
+
+// ogni oggetto di tipo Computer possiede:
+// - brand
+// - numberOfPeripherals
+// - showBrand()
+
+// ogni oggetto di tipo ComputerWithModel possiede:
+// - brand
+// - numberOfPeripherals
+// - showBrand()
+// - model
+// - showModel()
+
+console.log(macbookPro2015.numberOfPeripherals)
